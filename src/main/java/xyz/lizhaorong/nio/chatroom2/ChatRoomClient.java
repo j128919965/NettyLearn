@@ -1,4 +1,4 @@
-package xyz.lizhaorong.nio.chatroom;
+package xyz.lizhaorong.nio.chatroom2;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -65,14 +65,12 @@ public class ChatRoomClient {
                     e.printStackTrace();
                 }
             }
-            System.out.println("bye");
+
         }).start();
     }
 
-    private void stop() throws IOException {
+    private void stop(){
         receiving = false;
-        socketChannel.close();
-        selector.close();
     }
 
     public static void main(String[] args) throws IOException {
@@ -83,6 +81,7 @@ public class ChatRoomClient {
             chatRoomClient.sendMsg(msg);
         }
         chatRoomClient.stop();
+        System.out.println("bye");
     }
 
 }
