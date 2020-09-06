@@ -9,7 +9,7 @@
         <module name="NettyLearn" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="11">
       <module name="NettyLearn" target="11" />
     </bytecodeTargetLevel>
   </component>
